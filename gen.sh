@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # run this in door-god then cp output/* to bin
+# PATH in doorgod: vim .bashrc +++ export PATH=$PATH:~/bin
 
 CLIENTS_NUM=0
 CLIENTS[$CLIENTS_NUM]="dev wangbangxu 10.1.15.100 123qwedg"; CLIENTS_NUM=$((CLIENTS_NUM+1))
