@@ -1,0 +1,16 @@
+#!/usr/bin/expect -f  
+
+# refer:http://blog.51yip.com/linux/1462.html
+
+set timeout 100000
+set user [lindex $argv 0]
+set host [lindex $argv 1]
+set pswd [lindex $argv 2]
+
+spawn ssh $user@$host
+
+expect {
+    "*yes/no" { send "yes\r"; exp_continue }
+    "*password:" { send "$pswd\r" }
+}
+interact
